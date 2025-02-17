@@ -149,7 +149,9 @@ app.MapPost("/registr", async (User registrRequest, HttpContext context, to_do_t
 });
 
 //פונקציה בסיסית
-app.MapGet("/", () => "Hello World!");
+app.MapGet("/", () =>{
+            app.Logger.LogInformation("לוג שעובד");
+     return "Hello World!";});
 
 //שליפת כל המשימות
 app.MapGet("/tasks",[Authorize]   async (int id, HttpContext context, to_do_tasksContext tasksData) =>

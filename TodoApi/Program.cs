@@ -50,6 +50,8 @@ builder.Services.AddSwaggerGen(options => {
         }
     });
 });
+builder.Logging.ClearProviders();
+builder.Logging.AddConsole();
 builder.Services.AddAuthorization();
 builder.Services.AddAuthentication(options => {
     options.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;

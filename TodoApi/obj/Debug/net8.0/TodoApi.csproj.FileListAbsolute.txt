@@ -110,3 +110,4 @@ D:\limudim\praktikod\project_3 ToDoList\TodoApi\bin\Debug\net8.0\Microsoft.Ident
 D:\limudim\praktikod\project_3 ToDoList\TodoApi\bin\Debug\net8.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
 D:\limudim\praktikod\project_3 ToDoList\TodoApi\bin\Debug\net8.0\Microsoft.IdentityModel.Tokens.dll
 D:\limudim\praktikod\project_3 ToDoList\TodoApi\bin\Debug\net8.0\System.IdentityModel.Tokens.Jwt.dll
+D:\limudim\praktikod\project_3 ToDoList\TodoApi\obj\Debug\net8.0\TodoApi.sourcelink.json

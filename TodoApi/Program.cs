@@ -92,11 +92,11 @@ object CreateJWT(User user, IConfiguration configuration){
 }
 
 //בזמן פיתוח - שימוש בswagger
-if (app.Environment.IsDevelopment())
-{
+// if (app.Environment.IsDevelopment())
+// {
     app.UseSwagger();
     app.UseSwaggerUI();
-}
+// }
 
 //פונקציית התחברות
 app.MapPost("/login", async (User loginRequest, HttpContext context, to_do_tasksContext tasksData,  IConfiguration configuration) =>

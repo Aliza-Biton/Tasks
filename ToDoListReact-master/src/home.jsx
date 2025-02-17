@@ -14,7 +14,7 @@ export const Home = () => {
 
   return (
     <div id='homeDiv'>
-      <h2>ברוכים הבאים!</h2>
+      <h2>!ברוכים הבאים</h2>
       <Link to="/login" className="button login">התחברות</Link>
       <br />
       <Link to="/registr" className="button register">הרשמה</Link>

@@ -120,18 +120,20 @@ app.MapPost("/login", async (User loginRequest, HttpContext context, to_do_tasks
 //פונקציית הרשמה
 app.MapPost("/registr", async (User registrRequest, HttpContext context, to_do_tasksContext tasksData,  IConfiguration configuration) =>
 {
-    Console.WriteLine("הרשמה החלה");
+    app.Logger.LogInformation("Login attempt for user: {NameUser}", registrRequest.NameUser); // לוג עבור התחברות
     if (registrRequest == null || string.IsNullOrWhiteSpace(registrRequest.NameUser) || string.IsNullOrWhiteSpace(registrRequest.password))
     {
+                app.Logger.LogWarning("Invalid login request."); // לוג אזהרה אם הבקשה לא תקינה
         return Results.BadRequest("שם משתמש או סיסמה לא הוזנו.");
     }
     var user = tasksData.Users?.FirstOrDefault(u => u.NameUser == registrRequest.NameUser);
 
     if (user != null)
     {
+        app.Logger.LogInformation("לא נמצא");
         return Results.BadRequest("המשתמש כבר קיים");
     }
-    Console.WriteLine("הרשמה ממשיכה");
+   app.Logger.LogInformation("הרשמה ממשיכה");
     var newUser = new User{
         NameUser = registrRequest.NameUser,
         password = registrRequest.password
@@ -140,7 +142,7 @@ app.MapPost("/registr", async (User registrRequest, HttpContext context, to_do_t
     await tasksData.SaveChangesAsync(); // שמירת השינויים במסד הנתונים
     var jwt = CreateJWT(newUser, configuration);
     Console.WriteLine(jwt);
-        Console.WriteLine("הרשמה נגמרת");
+        app.Logger.LogInformation("הרשמה נגמרת");
     return Results.Ok(new { Token = jwt });
 });
 

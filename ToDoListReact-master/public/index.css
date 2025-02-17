@@ -2,8 +2,15 @@ html,
 body {
     margin: 0;
     padding: 0;
+    font-family: 'MyCustomFont', sans-serif;
 }
-
+@font-face {
+    font-family: 'MyCustomFont'; /* שם הפונט */
+    src: 
+         url('/FbSingulariHeb-Light.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
 button {
     margin: 0;
     padding: 0;
@@ -11,12 +18,12 @@ button {
     background: none;
     font-size: 100%;
     vertical-align: baseline;
-    font-family: inherit;
     color: inherit;
     -webkit-appearance: none;
     -ms-appearance: none;
     -o-appearance: none;
     appearance: none;
+    font-family: 'MyCustomFont', sans-serif;
 }
 
 body {
@@ -30,6 +37,7 @@ body {
     -moz-font-smoothing: antialiased;
     -ms-font-smoothing: antialiased;
     -o-font-smoothing: antialiased;
+    font-family: 'MyCustomFont', sans-serif;
 }
 
 button,
@@ -46,6 +54,7 @@ input[type="checkbox"] {
     border-top-left-radius: 2px;
     border-top-right-radius: 2px;
     box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.2), 0 25px 50px 0 rgba(0, 0, 0, 0.15);
+    font-family: 'MyCustomFont', sans-serif;
 }
 
     #todoapp:before {
@@ -106,6 +115,7 @@ input[type="checkbox"] {
         filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,StartColorStr='#9d8b83', EndColorStr='#847670');
         border-top-left-radius: 1px;
         border-top-right-radius: 1px;
+        font-family: 'MyCustomFont', sans-serif;
     }
 
 #new-todo,
@@ -114,7 +124,6 @@ input[type="checkbox"] {
     margin: 0;
     width: 100%;
     font-size: 24px;
-    font-family: inherit;
     line-height: 1.4em;
     border: 0;
     outline: none;
@@ -130,6 +139,7 @@ input[type="checkbox"] {
     -moz-font-smoothing: antialiased;
     -ms-font-smoothing: antialiased;
     -o-font-smoothing: antialiased;
+    font-family: 'MyCustomFont', sans-serif;
 }
 
 #new-todo {
@@ -181,6 +191,7 @@ label[for='toggle-all'] {
         position: relative;
         font-size: 24px;
         border-bottom: 1px dotted #ccc;
+        font-family: 'MyCustomFont', sans-serif;
     }
 
         #todo-list li:last-child {
@@ -245,6 +256,8 @@ label[for='toggle-all'] {
             line-height: 1.2;
             -webkit-transition: color 0.4s;
             transition: color 0.4s;
+            font-family: 'MyCustomFont', sans-serif;
+
         }
 
         #todo-list li.completed label {
@@ -561,7 +574,6 @@ button {
     background: none;
     font-size: 100%;
     vertical-align: baseline;
-    font-family: inherit;
     font-weight: inherit;
     color: inherit;
     -webkit-appearance: none;
@@ -624,7 +636,6 @@ body {
         font-weight: 100;
         text-align: center;
         color: #194350;
-        font-family: 'Poppins', sans-serif;
         -webkit-text-rendering: optimizeLegibility;
         -moz-text-rendering: optimizeLegibility;
         text-rendering: optimizeLegibility;
@@ -636,7 +647,6 @@ body {
     margin: 0;
     width: 100%;
     font-size: 24px;
-    font-family: inherit;
     font-weight: inherit;
     line-height: 1.4em;
     border: 0;
@@ -825,6 +835,7 @@ body {
 .todo-count {
     float: left;
     text-align: left;
+    font-family: 'MyCustomFont', sans-serif;
 }
 
     .todo-count strong {
@@ -936,6 +947,8 @@ html .clear-completed:active {
     font-size: 2rem;
     margin-bottom: 40px; /* הגדלת הרווח בין הכותרת לכפתורים */
     color: #333;
+    font-family: 'MyCustomFont', sans-serif;
+
   }
   
   /* עיצוב הקישורים */
@@ -951,6 +964,7 @@ html .clear-completed:active {
     border: 2px solid;
     border-radius: 22px;
     transition: 0.3s;
+    font-family: 'MyCustomFont', sans-serif;
   }
   
   /* עיצוב התחברות */
@@ -994,6 +1008,8 @@ html .clear-completed:active {
     font-size: 2rem;
     margin-bottom: 40px;
     color: #333;
+    font-family: 'MyCustomFont', sans-serif;
+
   }
   
   /* טפסים */
@@ -1013,6 +1029,7 @@ html .clear-completed:active {
     font-size: 1rem;
     text-align: center;
     transition: 0.3s;
+    font-family: 'MyCustomFont', sans-serif;
   }
   
   #loginDiv input:focus, #registrDiv input:focus {
@@ -1032,6 +1049,7 @@ html .clear-completed:active {
     cursor: pointer;
     transition: 0.3s;
     background-color: transparent;
+    font-family: 'MyCustomFont', sans-serif;
   }
   
   /* כפתור התחברות */
@@ -1061,6 +1079,7 @@ html .clear-completed:active {
     color: red;
     font-size: 0.9rem;
     margin-top: 10px;
+    font-family: 'MyCustomFont', sans-serif;
   }
 
   #sp{
@@ -1072,5 +1091,19 @@ html .clear-completed:active {
 
   #myTask{
     font-size: 80px;
-    margin-bottom: -10px;
+    margin-bottom: 20px;
+    color: white;
+    font-family: 'MyCustomFont', sans-serif;
+
   }
+  #gradient-box {
+    position: fixed;  /* הצמדת המלבן למסך גם בגלילה */
+    top: 20px;    /* מרחק מהתחתית */
+    left: 50%;       /* מיקום מרכזי */
+    transform: translateX(-50%);  /* הסטה חזרה של חצי רוחב המלבן */
+    width: 550px;   
+    height: 150px;
+    min-height: 150px;
+    background: linear-gradient(90deg, #ff0090, #2894a7);
+    z-index: -9999;
+}

@@ -120,6 +120,7 @@ app.MapPost("/login", async (User loginRequest, HttpContext context, to_do_tasks
 //פונקציית הרשמה
 app.MapPost("/registr", async (User registrRequest, HttpContext context, to_do_tasksContext tasksData,  IConfiguration configuration) =>
 {
+    Console.WriteLine("הרשמה החלה");
     if (registrRequest == null || string.IsNullOrWhiteSpace(registrRequest.NameUser) || string.IsNullOrWhiteSpace(registrRequest.password))
     {
         return Results.BadRequest("שם משתמש או סיסמה לא הוזנו.");
@@ -130,7 +131,7 @@ app.MapPost("/registr", async (User registrRequest, HttpContext context, to_do_t
     {
         return Results.BadRequest("המשתמש כבר קיים");
     }
-
+    Console.WriteLine("הרשמה ממשיכה");
     var newUser = new User{
         NameUser = registrRequest.NameUser,
         password = registrRequest.password
@@ -139,6 +140,7 @@ app.MapPost("/registr", async (User registrRequest, HttpContext context, to_do_t
     await tasksData.SaveChangesAsync(); // שמירת השינויים במסד הנתונים
     var jwt = CreateJWT(newUser, configuration);
     Console.WriteLine(jwt);
+        Console.WriteLine("הרשמה נגמרת");
     return Results.Ok(new { Token = jwt });
 });
 

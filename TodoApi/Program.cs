@@ -151,7 +151,7 @@ app.MapPost("/registr", async (User registrRequest, HttpContext context, to_do_t
 //פונקציה בסיסית
 app.MapGet("/", () =>{
             app.Logger.LogInformation("לוג שעובד");
-     return "Hello World!";});
+     return "ברוכים הבאים";});
 
 //פונקציה לניסיון הטלפון
 app.MapGet("/phon", () => {
@@ -213,5 +213,6 @@ app.MapDelete("/tasks/{id}", [Authorize]  async (int id, to_do_tasksContext task
 });
 
 app.Run();
+
 
 

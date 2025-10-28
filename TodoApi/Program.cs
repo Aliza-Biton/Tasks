@@ -156,7 +156,7 @@ app.MapGet("/", () =>{
 //פונקציה לניסיון הטלפון
 app.MapGet("/phon", () => {
     app.Logger.LogInformation("לוג שעובד");
-    return "Hello World!";
+    return "מי אמר אני ולא קיבל";
 });
 
 //שליפת כל המשימות
@@ -213,4 +213,5 @@ app.MapDelete("/tasks/{id}", [Authorize]  async (int id, to_do_tasksContext task
 });
 
 app.Run();
+
 
